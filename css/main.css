@@ -4913,14 +4913,14 @@ h2.section_header + .fontsize_20 {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	background: url(../img/preloader.png) no-repeat 50% 50% transparent;
+	background: url(../images/parallax/preloader.png) no-repeat 50% 50% transparent;
 	margin: -50px 0 0 -50px;
 	background-size: contain;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	.preloader_image {
-		background: url(../img/preloader.png) no-repeat 50% 50% transparent;
+		background: url(../imges/parallax/preloader.png) no-repeat 50% 50% transparent;
 	}
 }
 
@@ -7017,7 +7017,7 @@ body.boxed {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: url(../img/parallax/header.jpg);
+	background-image: url(../images//parallax/header.jpg);
 }
 
 .page_header.background_cover.header_transparent:before {
@@ -15414,6 +15414,6 @@ a.color-icon.border-icon:hover {
  }
  .gal-images img{
 	 height:250px;
-	 width:400px;
+	 width:100%;
 	 object-fit: cover;
  }
