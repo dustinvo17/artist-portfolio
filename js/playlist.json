@@ -1,0 +1,108 @@
+{
+	"embed_link": "",
+	"permalink": "",
+	"skin": "",
+	"thumbnail": "images/albums/background.jpg",
+	"tracks": [
+		{
+			"artist": "AndreySkarlat", 
+			"artworkId": 0,
+			"artworkUrl": "#0",
+			"audioId": 1,
+			"audioUrl": "https://s3.envato.com/files/229455919/preview.mp3",
+			"format": "mp3",
+			"length": "5:55",
+			"title": "Upbeat & Inspiring",
+			"order": 0,
+			"mp3": "https://s3.envato.com/files/229455919/preview.mp3",
+			"meta": { 
+				"artist": "AndreySkarlat",
+				"length_formatted": "5:55" 
+			},
+			"src": "https://s3.envato.com/files/229455919/preview.mp3",
+			"thumb": { 
+				"src": "images/albums/01.jpg" 
+			}
+		},
+		{
+			"artist": "AndreySkarlat", 
+			"artworkId": 0,
+			"artworkUrl": "#0",
+			"audioId": 2,
+			"audioUrl": "https://0.s3.envato.com/files/216844247/preview.mp3",
+			"format": "mp3",
+			"length": "7:48",
+			"title": "Inspiring Uplifting Corporate",
+			"order": 0,
+			"mp3": "https://0.s3.envato.com/files/216844247/preview.mp3",
+			"meta": { 
+				"artist": "AndreySkarlat",
+				"length_formatted": "7:48" 
+			},
+			"src": "https://0.s3.envato.com/files/216844247/preview.mp3",
+			"thumb": { 
+				"src": "images/albums/02.jpg" 
+			}
+		},
+		{
+			"artist": "AndreySkarlat", 
+			"artworkId": 0,
+			"artworkUrl": "#0",
+			"audioId": 3,
+			"audioUrl": "https://0.s3.envato.com/files/196824856/preview.mp3",
+			"format": "mp3",
+			"length": "11:36",
+			"title": "Inspiration Kit",
+			"order": 0,
+			"mp3": "https://0.s3.envato.com/files/196824856/preview.mp3",
+			"meta": { 
+				"artist": "AndreySkarlat",
+				"length_formatted": "11:36" 
+			},
+			"src": "https://0.s3.envato.com/files/196824856/preview.mp3",
+			"thumb": { 
+				"src": "images/albums/03.jpg" 
+			}
+		},
+		{
+			"artist": "AndreySkarlat", 
+			"artworkId": 0,
+			"artworkUrl": "#0",
+			"audioId": 4,
+			"audioUrl": "https://0.s3.envato.com/files/179391137/preview.mp3",
+			"format": "mp3",
+			"length": "4:26",
+			"title": "Happy Upbeat Ukulele",
+			"order": 0,
+			"mp3": "https://0.s3.envato.com/files/179391137/preview.mp3",
+			"meta": { 
+				"artist": "AndreySkarlat",
+				"length_formatted": "4:26" 
+			},
+			"src": "https://0.s3.envato.com/files/179391137/preview.mp3",
+			"thumb": { 
+				"src": "images/albums/04.jpg" 
+			}
+		},
+		{
+			"artist": "AndreySkarlat", 
+			"artworkId": 0,
+			"artworkUrl": "#0",
+			"audioId": 5,
+			"audioUrl": "https://0.s3.envato.com/files/175505487/preview.mp3",
+			"format": "mp3",
+			"length": "3:30",
+			"title": "Motivational and Inspiring",
+			"order": 0,
+			"mp3": "https://0.s3.envato.com/files/175505487/preview.mp3",
+			"meta": { 
+				"artist": "AndreySkarlat",
+				"length_formatted": "3:30" 
+			},
+			"src": "https://0.s3.envato.com/files/175505487/preview.mp3",
+			"thumb": { 
+				"src": "images/albums/05.jpg" 
+			}
+		}
+	]
+}
