@@ -15417,3 +15417,8 @@ a.color-icon.border-icon:hover {
 	 width:100%;
 	 object-fit: cover;
  }
+ @media (max-width: 768px) { 
+	.feature-video {
+		display:none
+	}
+ }
