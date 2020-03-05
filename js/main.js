@@ -467,128 +467,7 @@ function windowLoadInit() {
 	
 
 	//comingsoon counter
-	if (jQuery().countdown) {
-		//today date plus month for demo purpose
-		var demoDate = new Date();
-		demoDate.setMonth(demoDate.getMonth()+1);
-		jQuery('#comingsoon-countdown').countdown({until: demoDate});
-	}
-
-	/////////////////////////////////////////////////
-	//PHP widgets - contact form, search, MailChimp//
-	/////////////////////////////////////////////////
-
-	//contact form processing
-	jQuery('form.contact-form').on('submit', function( e ){
-		e.preventDefault();
-		var $form = jQuery(this);
-		jQuery($form).find('span.contact-form-respond').remove();
-
-		//checking on empty values
-		jQuery($form).find('[aria-required="true"], [required]').each(function(index) {
-			var $thisRequired = jQuery(this);
-			if (!$thisRequired.val().length) {
-				$thisRequired
-					.addClass('invalid')
-					.on('focus', function(){
-						$thisRequired
-							.removeClass('invalid');
-					});
-			}
-		});
-		//if one of form fields is empty - exit
-		if ($form.find('[aria-required="true"], [required]').hasClass('invalid')) {
-			return;
-		}
-
-		//sending form data to PHP server if fields are not empty
-		var request = $form.serialize();
-		var ajax = jQuery.post( "contact-form.php", request )
-		.done(function( data ) {
-			jQuery($form).find('[type="submit"]').attr('disabled', false).parent().append('<span class="contact-form-respond highlight">'+data+'</span>');
-			//cleaning form
-			var $formErrors = $form.find('.form-errors');
-			if ( !$formErrors.length ) {
-				$form[0].reset();
-			}
-		})
-		.fail(function( data ) {
-			jQuery($form).find('[type="submit"]').attr('disabled', false).parent().append('<span class="contact-form-respond highlight">Mail cannot be sent. You need PHP server to send mail.</span>');
-		})
-	});
-
-
-	//search modal
-	jQuery(".search_modal_button").on('click', function(e){
-		e.preventDefault();
-		jQuery('#search_modal').modal('show').find('input').first().focus();
-	});
-	//search form processing
-	jQuery('form.searchform').on('submit', function( e ){
-		
-		e.preventDefault();
-		var $form = jQuery(this);
-		var $searchModal = jQuery('#search_modal');
-		$searchModal.find('div.searchform-respond').remove();
-
-		//checking on empty values
-		jQuery($form).find('[type="text"]').each(function(index) {
-			var $thisField = jQuery(this);
-			if (!$thisField.val().length) {
-				$thisField
-					.addClass('invalid')
-					.on('focus', function(){
-						$thisField.removeClass('invalid')
-					});
-			}
-		});
-		//if one of form fields is empty - exit
-		if ($form.find('[type="text"]').hasClass('invalid')) {
-			return;
-		}
-
-		$searchModal.modal('show');
-		//sending form data to PHP server if fields are not empty
-		var request = $form.serialize();
-		var ajax = jQuery.post( "search.php", request )
-		.done(function( data ) {
-			$searchModal.append('<div class="searchform-respond">'+data+'</div>');
-		})
-		.fail(function( data ) {
-			$searchModal.append('<div class="searchform-respond">Search cannot be done. You need PHP server to search.</div>');
-			
-		})
-	});
-
-	//MailChimp subscribe form processing
-	jQuery('.signup').on('submit', function( e ) {
-		e.preventDefault();
-		var $form = jQuery(this);
-		// update user interface
-		$form.find('.response').html('Adding email address...');
-		// Prepare query string and send AJAX request
-		jQuery.ajax({
-			url: 'mailchimp/store-address.php',
-			data: 'ajax=true&email=' + escape($form.find('.mailchimp_email').val()) + '&fullname=' + escape($form.find('.mailchimp_fullname').val()),
-			success: function(msg) {
-				$form.find('.response').html(msg);
-			}
-		});
-	});
 	
-	//twitter
-	if (jQuery().tweet) {
-		jQuery('.twitter').tweet({
-			modpath: "./twitter/",
-			count: 2,
-			avatar_size: 48,
-			loading_text: 'loading twitter feed...',
-			join_text: 'auto',
-			username: 'michaeljackson', 
-			template: "<span class=\"tweet_text\">{tweet_text}</span><span class=\"greylinks black small-text\"> {time}</span>"
-		});
-	}
-
 
 	//adding CSS classes for elements that needs different styles depending on they widht width
 	//see 'plugins.js' file
@@ -624,77 +503,7 @@ function windowLoadInit() {
 	/////////
 	//SHOP///
 	/////////
-	jQuery('#toggle_shop_view').on('click', function( e ) {
-		e.preventDefault();
-		jQuery(this).toggleClass('grid-view');
-		jQuery('#products').toggleClass('grid-view list-view');
-	});
-	//zoom image
-	if (jQuery().elevateZoom) {
-		jQuery('#product-image').elevateZoom({
-			gallery: 'product-image-gallery',
-			cursor: 'pointer', 
-			galleryActiveClass: 'active', 
-			responsive:true, 
-			loadingIcon: 'img/AjaxLoader.gif'
-		});
-	}
 	
-	//add review button
-	jQuery('.review-link').on('click', function( e ) {
-		var $thisLink = jQuery(this);
-		var reviewTabLink = jQuery('a[href="#reviews_tab"]');
-		//show tab only if it's hidden
-		if (!reviewTabLink.parent().hasClass('active')) {
-			reviewTabLink
-			.tab('show')
-			.on('shown.bs.tab', function (e) {
-				$window.scrollTo($thisLink.attr('href'), 400);
-			})
-		}
-		$window.scrollTo($thisLink.attr('href'), 400);
-	});
-
-	//product counter
-	jQuery('.plus, .minus').on('click', function( e ) {
-		var numberField = jQuery(this).parent().find('[type="number"]');
-		var currentVal = numberField.val();
-		var sign = jQuery(this).val();
-		if (sign === '-') {
-			if (currentVal > 1) {
-				numberField.val(parseFloat(currentVal) - 1);
-			}
-		} else {
-			numberField.val(parseFloat(currentVal) + 1);
-		}
-	});
-	
-	//remove product from cart
-	jQuery('a.remove').on('click', function( e ) {
-		e.preventDefault();
-		jQuery(this).closest('tr, .media').remove();
-	});
-
-	//price filter - only for HTML
-	if (jQuery().slider) {
-		var $rangeSlider = jQuery(".slider-range-price");
-		if ($rangeSlider.length) {
-			var $priceMin = jQuery(".price_from");
-			var $priceMax = jQuery(".price_to");
-			$rangeSlider.slider({
-				range: true,
-				min: 0,
-				max: 200,
-				values: [ 30, 100 ],
-				slide: function( event, ui ) {
-					$priceMin.html( '$' + ui.values[ 0 ] );
-					$priceMax.html( '$' + ui.values[ 1 ] );
-				}
-			});
-			$priceMin.html('$' + $rangeSlider.slider("values", 0));
-			$priceMax.html('$' + $rangeSlider.slider("values", 1));
-		}
-	}
 
 	//color filter 
 	jQuery(".color-filters").find("a[data-background-color]").each(function() {
@@ -876,10 +685,7 @@ function windowLoadInit() {
 	////////////////////
 	//triggered search//
 	////////////////////
-	jQuery('.search_form_trigger').on('click', function($e) {
-		$e.preventDefault();
-		jQuery( '.search_form_trigger, .search_form_wrapper' ).toggleClass('active');
-	});
+
 
 	////////////////
 	//owl carousel//
@@ -1101,53 +907,7 @@ function windowLoadInit() {
 	}
 
 	// Instagram widget
-	if(jQuery().spectragram) {
-		var Spectra = {
-			instaToken: '3905738328.60c782d.b65ed3f058d64e6ab32c110c6ac12d9b',
-			instaID: '60c782dfecaf4050b59ff4c159246641',
-
-			init: function () {
-				jQuery.fn.spectragram.accessData = {
-					accessToken: this.instaToken,
-					clientID: this.instaID
-				};
-
-				//available methods: getUserFeed, getRecentTagged
-				jQuery('.instafeed').each(function(){
-					var $this = jQuery(this);
-					if ($this.find('img').length) {
-						return;
-					}
-					$this.spectragram('getRecentTagged',{
-						max: 4,
-						//pass username if you are using getUserFeed method
-						query: 'grey',
-						wrapEachWith: '<div class="photo">'
-					});
-				});
-			}
-		}
-
-		Spectra.init();
-	}
-
-	//video images preview - from WP
-	jQuery('.embed-placeholder').each(function(){
-		jQuery(this).on('click', function(e) {
-			var $thisLink = jQuery(this);
-			// if prettyPhoto popup with YouTube - return
-			if ($thisLink.attr('data-gal')) {
-				return;
-			}
-			e.preventDefault();
-			if ($thisLink.attr('href') === '' || $thisLink.attr('href') === '#') {
-				$thisLink.replaceWith($thisLink.data('iframe').replace(/&amp/g, '&').replace(/$lt;/g, '<').replace(/&gt;/g, '>').replace(/$quot;/g, '"')).trigger('click');
-			} else {
-				$thisLink.replaceWith('<iframe class="embed-responsive-item" src="'+ $thisLink.attr('href') + '?rel=0&autoplay=1'+ '"></iframe>');
-			}
-		});
-	});
-
+	
 	// init Isotope
 	jQuery('.isotope_container').each(function(index) {
 		var $container = jQuery(this);
