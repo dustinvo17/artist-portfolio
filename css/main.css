@@ -125,6 +125,12 @@ Border colors for elements in color section: rgba(255, 255, 255, 0.2)
 ** Bootstrap Overrides
 */
 /* columns with 20 and 40 percents width */
+:root {
+	--default-color: #dd4377;
+	--hex-main: #D4AF37;
+	--main-color: 	rgb(212,175,55);
+}
+
 .col-xs-20,
 .col-sm-20,
 .col-md-20,
@@ -254,7 +260,7 @@ Border colors for elements in color section: rgba(255, 255, 255, 0.2)
 }
 
 .breadcrumb > .active {
-	color: #dd4377;
+	color: rgb(212,175,55);
 }
 
 .breadcrumb > li + li:before {
@@ -348,7 +354,7 @@ Border colors for elements in color section: rgba(255, 255, 255, 0.2)
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-	background-color: #dd4377;
+	background-color: rgb(212,175,55);
 	color: #ffffff;
 }
 
@@ -628,7 +634,7 @@ label {
 	font-size: 24px;
 	left: 20px;
 	top: 50%;
-	color: #dd4377;
+	color: rgb(212,175,55);
 }
 
 .checkbox label[for] + input[type=checkbox],
@@ -695,7 +701,7 @@ input[type=radio] {
 	right: 0;
 	top: 0;
 	border: none;
-	background-color: #dd4377;
+	background-color: rgb(212,175,55);
 	color: #ffffff;
 }
 
@@ -782,7 +788,7 @@ input[type*="password"],
 }
 
 .select2-selection:hover .select2-selection__arrow b {
-	color: #dd4377;
+	color: rgb(212,175,55);
 }
 
 @media (min-width: 768px) {
@@ -1671,17 +1677,17 @@ html {
 
 ::-moz-selection {
 	color: #ffffff;
-	background-color: #dd4377;
+	background-color: var(--main-color);
 }
 
 ::selection {
 	color: #ffffff;
-	background-color: #dd4377;
+	background-color: var(--main-color);
 }
 
 ::-moz-selection {
 	color: #ffffff;
-	background-color: #dd4377;
+	background-color: var(--main-color);
 }
 
 body {
@@ -2212,7 +2218,7 @@ input[type="submit"]:last-child {
 .wc-proceed-to-checkout .checkout-button,
 .form-submit [type="submit"] {
 	color: #ffffff;
-	background-color: #dd4377;
+	background-color: rgb(212,175,55);
 }
 
 .theme_buttons.color1 a:hover, .theme_buttons.color1 a:focus, .theme_buttons.color1 a:active,
@@ -2236,7 +2242,7 @@ input[type="submit"]:last-child {
 
 .theme_buttons.inverse a,
 .theme_button.inverse {
-	color: #dd4377;
+	color: rgb(212,175,55);
 	background-color: #e6e6e6;
 }
 
@@ -2270,7 +2276,7 @@ input[type="submit"]:last-child {
 .theme_button:active,
 .theme_button:hover,
 .theme_button:focus {
-	color: #dd4377;
+	color: var(--main-color);
 	opacity: 1;
 	text-decoration: none;
 	outline: none;
@@ -2356,7 +2362,7 @@ a.inactive {
 }
 
 .no_bg_button.color1 {
-	color: #dd4377;
+	color: var(--main-color);
 }
 
 .no_bg_button.color1:hover, .no_bg_button.color1:focus, .no_bg_button.color1:active {
@@ -2637,7 +2643,7 @@ p > i + [class*="rt-icon"] {
 }
 
 .owl-carousel .owl-nav > div:hover:after {
-	color: #dd4377;
+	color: var(--main-color);
 }
 
 .top-right-nav .owl-nav {
@@ -3443,7 +3449,7 @@ a.pp_arrow_next.disabled {
 
 .pp_gallery ul a:hover,
 .pp_gallery ul .selected a {
-	border-color: #dd4377;
+	border-color: var(--main-color);
 }
 
 .pp_gallery ul a img {
@@ -3733,7 +3739,7 @@ div.ppt {
 	font-size: 0;
 	color: transparent;
 	color: #ffffff;
-	background: #dd4377;
+	background: var(--main-color);
 	border-radius: 25px;
 }
 
@@ -4883,6 +4889,7 @@ h2.section_header .small {
 
 h2.section_header.with_line {
 	padding: 0 40px;
+	font-style: normal;
 }
 
 h2.section_header + .fontsize_20 {
@@ -5209,7 +5216,11 @@ body.boxed {
 .with_frame_image {
 	position: relative;
 	display: inline-block;
+	color: var(--main-color);
 	
+}
+.with_frame_image img {
+	max-height:600px;
 }
 
 .with_frame_image:before {
@@ -5219,7 +5230,7 @@ body.boxed {
 	left: -20px;
 	width: 100%;
 	height: 100%;
-	border: 4px solid #dd4377;
+	border: 4px solid ;
 	border-radius: 5px;
 	z-index: -1;
 }
@@ -5245,7 +5256,7 @@ body.boxed {
 	height: 2px;
 	left: 0;
 	right: 0;
-	background-color: #dd4377;
+	background-color: var(--main-color);
 	z-index: -1;
 }
 
@@ -6484,7 +6495,8 @@ body.boxed {
 }
 
 .vertical-item.content-absolute .item-content.cs {
-	background-color: rgba(221, 67, 119, 0.8);
+
+	background-color: rgba(212,175,55,0.8);
 }
 
 .vertical-item.content-absolute.vertical-center .item-content {
@@ -6725,7 +6737,7 @@ body.boxed {
 }
 
 [class*="-item"] .links-wrap a.p-view {
-	color: #dd4377;
+	color: var(--main-color);
 }
 
 [class*="-item"] .links-wrap a.p-view:hover {
@@ -6733,7 +6745,7 @@ body.boxed {
 }
 
 [class*="-item"] .links-wrap a.p-link {
-	color: #dd4377;
+	color: var(--main-color);
 	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
 }
 
@@ -6754,7 +6766,7 @@ body.boxed {
 [class*="-item"] .links-wrap a.p-view:before, [class*="-item"] .links-wrap a.p-view:after {
 	position: absolute;
 	content: "";
-	background-color: #dd4377;
+	background-color: var(--main-color);
 	left: 50%;
 	top: 50%;
 	opacity: 0;
@@ -6822,7 +6834,7 @@ body.boxed {
 }
 
 .media-links .bottom-links a:hover {
-	background-color: #dd4377;
+	background-color:var(--main-color);
 }
 
 @media (min-width: 1200px) {
@@ -8466,7 +8478,7 @@ body.active-side-header.slide-right .page_header_side {
 }
 
 .ls .theme_button.no_bg_button.color1 {
-	color: #dd4377;
+	color: var(--main-color);
 }
 
 .ls .theme_button.no_bg_button:hover, .ls .theme_button.no_bg_button:focus, .ls .theme_button.no_bg_button:active {
@@ -8479,7 +8491,7 @@ body.active-side-header.slide-right .page_header_side {
 
 .ls .select-group:hover select + .theme_button,
 .ls .select-group:hover select + i {
-	color: #dd4377;
+	color: var(--main-color);
 }
 
 /*
@@ -8813,7 +8825,7 @@ body.active-side-header.slide-right .page_header_side {
 }
 
 .ds a:hover {
-	color: #dd4377;
+	color: var(--main-color);
 }
 
 .ds blockquote {
@@ -8857,8 +8869,8 @@ body.active-side-header.slide-right .page_header_side {
 
 .ds .highlight,
 .ds .highlight1 {
-	color: #dd4377;
-	border-color: #dd4377;
+	color: var(--main-color);
+	border-color: var(--main-color);
 }
 
 .ds .highlight2 {
@@ -9396,7 +9408,7 @@ body.active-side-header.slide-right .page_header_side {
 .ds .theme_buttons.color1 a,
 .ds .theme_button.color1 {
 	color: #ffffff;
-	background-color: #dd4377;
+	background-color: var(--main-color);
 }
 
 .ds .theme_buttons.color1 a:hover, .ds .theme_buttons.color1 a:focus, .ds .theme_buttons.color1 a:active,
@@ -10059,22 +10071,19 @@ body.active-side-header.slide-right .page_header_side {
 #featured-video.background_cover, #featured-video.parallax,
 .page_featured_video.background_cover,
 .page_featured_video.parallax {
-	background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),  url(https://scontent.fhou1-2.fna.fbcdn.net/v/t1.15752-9/86462225_129091505099813_4248691858064015360_n.jpg?_nc_cat=102&_nc_ohc=AHP6LuA-7coAX9P7WOK&_nc_ht=scontent.fhou1-2.fna&oh=9dfc0bcc501f214f0bf7e4983382ea78&oe=5EB4C0C0);
+
+	background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url(https://scontent.fhou1-1.fna.fbcdn.net/v/t1.0-9/89468574_2963721893678572_8004675311427911680_o.jpg?_nc_cat=111&_nc_sid=8024bb&_nc_ohc=kffJRGiqof8AX9xw5_h&_nc_ht=scontent.fhou1-1.fna&oh=f42d64b7f3df4bb3c387617b9865a993&oe=5E8114E6);
 }
 @media (min-width:1200px){
 	.mv-suni {
-		height: 60vh;
+		height: 80vh;
 		background-size: cover;
-		background-position: 100% 50%!important;
+		background-position: 100% 30%!important;
 		background-repeat: no-repeat;
 	
 	}
 }
-@media (max-width:600px){
-	.mv-suni {
-		background-position: 70% 100%!important;
-	}
-}
+
 
 
 #featured-video.background_cover:after, #featured-video.parallax:after,
@@ -10308,7 +10317,8 @@ body.active-side-header.slide-right .page_header_side {
 
 .intro_section > img {
 	width: 100%;
-	max-height: 150vh;object-fit: cover;filter:brightness(60%);
+	max-height: 130vh;
+	object-fit: cover;
 }
 
 .intro_section.ds {
@@ -10503,8 +10513,13 @@ body.active-side-header.slide-right .page_header_side {
 		padding-bottom: 50px;
 	}
 }
-
+.intro_section img {
+	max-height:100vh;
+	object-fit: center;
+	filter:brightness(50%);
+}
 @media (min-width: 1200px) {
+	
 	.intro_section h3 {
 		font-size: 60px;
 	}
@@ -10521,6 +10536,7 @@ body.active-side-header.slide-right .page_header_side {
 	.intro_section.page_mainslider .slide_description_wrapper {
 		padding-top: 140px;
 		padding-bottom: 50px;
+		
 	}
 }
 
@@ -15405,7 +15421,7 @@ a.color-icon.border-icon:hover {
 	font-size:14px;
 }
   .testimonial_btn{
-    background-color: #dd4377 !important;
+    background-color: var(--main-color) !important;
     color: #fff !important;
  }
  .client-img img{
