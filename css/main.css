@@ -10515,8 +10515,14 @@ body.active-side-header.slide-right .page_header_side {
 }
 .intro_section img {
 	max-height:100vh;
-	object-fit: center;
+	object-fit: cover;
 	filter:brightness(50%);
+}
+@media (max-width:700px) {
+	.intro_section img {
+		height:65vh;
+
+	}
 }
 @media (min-width: 1200px) {
 	
