@@ -1016,6 +1016,9 @@ $window.on('resize', function(){
 });
 $('.contact-form').submit(function(e) {
 		alert("Thank you for your information, I will get back to you in 2 business days!")
+		if(window.location.href.includes('contact')){
+			window.location.href = 'https://minhquanart.com/contact.html'
+		}
 })
 //end of IIFE function
 
