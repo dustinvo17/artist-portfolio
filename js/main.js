@@ -1014,7 +1014,8 @@ $window.on('resize', function(){
 	}
 	
 });
-$('.contact-form').submit(function() {
+$('.contact-form').submit(function(e) {
+		e.preventDefault()
 		alert("Thank you for your information, I will get back to really soon!")
 })
 //end of IIFE function
