@@ -15439,7 +15439,7 @@ a.color-icon.border-icon:hover {
 	 width:100%;
 	 object-fit: cover;
  }
- @media (max-width: 768px) { 
+ @media (max-width: 1300px) { 
 	.feature-video {
 		display:none
 	}
