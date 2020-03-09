@@ -1014,6 +1014,11 @@ $window.on('resize', function(){
 	}
 	
 });
+$('.contact-form').submit(function() {
+	alert(
+		'test'
+	)
+})
 //end of IIFE function
 
 })();
