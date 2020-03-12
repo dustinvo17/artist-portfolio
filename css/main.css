@@ -8367,7 +8367,7 @@ body.active-side-header.slide-right .page_header_side {
 }
 
 .ls .greylinks a:hover, .ls .greylinks a:focus, .ls .greylinks a:active {
-	color: #dd4377;
+	color: var(--main-color);
 }
 
 .ls .greylinks.color2 a:hover, .ls .greylinks.color2 a:focus, .ls .greylinks.color2 a:active {
@@ -8379,12 +8379,12 @@ body.active-side-header.slide-right .page_header_side {
 }
 
 .ls .darklinks a:hover {
-	color: #dd4377;
+	color: var(--main-color);
 }
 
 .ls .highlightlinks a,
 .ls .highlightlink {
-	color: #dd4377;
+	color: var(--main-color);
 }
 
 .ls .highlightlinks a:hover,
@@ -8687,7 +8687,7 @@ body.active-side-header.slide-right .page_header_side {
 .ds h4 a:hover,
 .ds h5 a:hover,
 .ds h6 a:hover {
-	color: #dd4377;
+	color: var(--main-color);
 }
 
 .ds [class*='main_bg'],
@@ -8893,7 +8893,7 @@ body.active-side-header.slide-right .page_header_side {
 
 .ds .highlightlinks a,
 .ds .highlightlink {
-	color: #dd4377;
+	color: var(--main-color);
 }
 
 .ds .highlightlinks a:hover,
@@ -8924,7 +8924,7 @@ body.active-side-header.slide-right .page_header_side {
 }
 
 .ds .greylinks a:hover {
-	color: #dd4377;
+	color: var(--main-color);
 }
 
 .ds .greylinks a.social-icon {
@@ -9561,7 +9561,7 @@ body.active-side-header.slide-right .page_header_side {
 .cs .ds h4 a:hover,
 .cs .ds h5 a:hover,
 .cs .ds h6 a:hover {
-	color: #dd4377;
+	color: var(--main-color);
 }
 
 .cs h1,
