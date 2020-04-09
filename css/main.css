@@ -10072,7 +10072,7 @@ body.active-side-header.slide-right .page_header_side {
 .page_featured_video.background_cover,
 .page_featured_video.parallax {
 
-	background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url(https://scontent.fhou1-1.fna.fbcdn.net/v/t1.0-9/89468574_2963721893678572_8004675311427911680_o.jpg?_nc_cat=111&_nc_sid=8024bb&_nc_ohc=kffJRGiqof8AX9xw5_h&_nc_ht=scontent.fhou1-1.fna&oh=f42d64b7f3df4bb3c387617b9865a993&oe=5E8114E6);
+	background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url(../images/parallax/89468574_2963721893678572_8004675311427911680_o.jpg);
 }
 @media (min-width:1200px){
 	.mv-suni {
@@ -10103,7 +10103,7 @@ body.active-side-header.slide-right .page_header_side {
 
 .page_contact.background_cover {
 	background-position:30% 30%;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),url(https://scontent.fhou1-1.fna.fbcdn.net/v/t1.15752-9/86970746_182354386356369_5955530029206077440_n.jpg?_nc_cat=106&_nc_ohc=EISaB1zJEkUAX-qKXTo&_nc_ht=scontent.fhou1-1.fna&oh=ce4e741e834b1068d237eaec8813bd3a&oe=5EC3C5A5);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),url(../images/contactform.jpg);
 }
 @media (max-width:600px){
 	.page_contact.background_cover { 
